@@ -19,8 +19,13 @@
  package list_providers;
 
 message ProviderInfoProto {
-    uint32 id = 1;
+    string uuid = 1;
     string description = 2;
+    string vendor = 3;
+    uint32 version_maj = 4;
+    uint32 version_min = 5;
+    uint32 version_rev = 6;
+    uint32 id = 7;
 }
 
 message OpListProvidersProto { }
