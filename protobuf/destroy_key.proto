@@ -16,13 +16,11 @@
  */
 syntax = "proto3";
 
-import "key_attributes.proto";
-
 package destroy_key;
 
 message OpDestroyKeyProto {
     string key_name = 1;
-    key_attributes.KeyLifetime key_lifetime = 2;
+    reserved 2;
 }
 
 message ResultDestroyKeyProto { }
