@@ -14,12 +14,11 @@
   -- See the License for the specific language governing permissions and
   -- limitations under the License.
 --->
-![PARSEC logo](PARSEC.png)
-# PARSEC Language Neutral Operations
+# Parsec Language Neutral Operations
 
-This repository provides a centralised access for all PARSEC operations.
+This repository provides a centralised access for all Parsec operations.
 Client libraries can download and compile the operations of this repository to the programming language that they use.
-Please check the [operations document](https://github.com/parallaxsecond/parsec/blob/master/docs/operation_directory.md)
+Please check the [operations document](https://parallaxsecond.github.io/parsec-book/parsec/operations/index.html)
 for more information on operations.
 
 # License
@@ -28,7 +27,7 @@ The software is provided under Apache-2.0. Contributions to this project are acc
 
 # User Guide
 
-In order to make a PARSEC client library, you will need to add in the build script of your library the needed operations
+In order to make a Parsec client library, you will need to add in the build script of your library the needed operations
 to clone this git repository and then compile the operations into functions to convert between your language native
 memory structures and the operations format.
 

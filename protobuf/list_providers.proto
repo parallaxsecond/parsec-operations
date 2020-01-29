@@ -14,22 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- syntax = "proto3";
+syntax = "proto3";
 
- package list_providers;
+package list_providers;
 
 message ProviderInfoProto {
-    string uuid = 1;
-    string description = 2;
-    string vendor = 3;
-    uint32 version_maj = 4;
-    uint32 version_min = 5;
-    uint32 version_rev = 6;
-    uint32 id = 7;
+  string uuid = 1;
+  string description = 2;
+  string vendor = 3;
+  uint32 version_maj = 4;
+  uint32 version_min = 5;
+  uint32 version_rev = 6;
+  uint32 id = 7;
 }
 
-message OpListProvidersProto { }
+message OpListProvidersProto {}
 
-message ResultListProvidersProto {
-    repeated ProviderInfoProto providers = 1;
-}
+message ResultListProvidersProto { repeated ProviderInfoProto providers = 1; }

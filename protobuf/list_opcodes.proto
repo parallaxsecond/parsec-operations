@@ -18,8 +18,6 @@ syntax = "proto3";
 
 package list_opcodes;
 
-message OpListOpcodesProto { }
+message OpListOpcodesProto {}
 
-message ResultListOpcodesProto {
-    repeated uint32 opcodes = 1;
-}
+message ResultListOpcodesProto { repeated uint32 opcodes = 1; }
