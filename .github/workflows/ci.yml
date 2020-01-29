@@ -9,9 +9,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install clang-format
-    - run: sudo apt install clang-format
+      run: sudo apt install clang-format
     - name: Check formatting using clang-format
-    - run: ./ci/check_format.sh
+      run: ./ci/check_format.sh
 
   build:
     name: Build tests
@@ -19,6 +19,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install protoc
-    - run: sudo apt install protobuf-compiler
+      run: sudo apt install protobuf-compiler
     - name: Check that the protobuf files compile using protoc
-    - run: ./ci/check_build.sh
+      run: ./ci/check_build.sh
