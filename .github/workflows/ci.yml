@@ -9,7 +9,12 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install clang-format
-      run: sudo apt install clang-format-6.0
+      run: |
+          sudo apt update
+          # This is needed because of a bug, see microsoft/azure-pipelines-image-generation#672
+          sudo apt-get remove -y clang-6.0 libclang-common-6.0-dev libclang1-6.0 libllvm6.0
+          sudo apt-get autoremove
+          sudo apt install clang-format
     - name: Check formatting using clang-format
       run: ./ci/check_format.sh
 
@@ -19,6 +24,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install protoc
-      run: sudo apt install protobuf-compiler
+      run: |
+          sudo apt update
+          sudo apt install protobuf-compiler
     - name: Check that the protobuf files compile using protoc
       run: ./ci/check_build.sh
