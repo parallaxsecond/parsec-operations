@@ -16,6 +16,8 @@
 --->
 # Parsec Language Neutral Operations
 
+![](https://github.com/parallaxsecond/parsec-operations/workflows/Continuous%20Integration/badge.svg)
+
 This repository provides a centralised access for all Parsec operations.
 Client libraries can download and compile the operations of this repository to the programming language that they use.
 Please check the [operations document](https://parallaxsecond.github.io/parsec-book/parsec/operations/index.html)
