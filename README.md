@@ -20,7 +20,7 @@
 
 This repository provides a centralised access for all Parsec operations.
 Client libraries can download and compile the operations of this repository to the programming language that they use.
-Please check the [operations document](https://parallaxsecond.github.io/parsec-book/parsec/operations/index.html)
+Please check the [operations document](https://parallaxsecond.github.io/parsec-book/parsec_client/operations/index.html)
 for more information on operations.
 
 # License
