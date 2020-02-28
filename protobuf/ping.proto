@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019, Arm Limited, All Rights Reserved
+ * Copyright (c) 2019-2020, Arm Limited, All Rights Reserved
  * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -18,9 +18,9 @@ syntax = "proto3";
 
 package ping;
 
-message OpPingProto {}
+message Operation {}
 
-message ResultPingProto {
-  uint32 supported_version_maj = 1; // Cast down to 8 bits
-  uint32 supported_version_min = 2; // Cast down to 8 bits
+message Result {
+  uint32 wire_protocol_version_maj = 1; // Cast down to 8 bits
+  uint32 wire_protocol_version_min = 2; // Cast down to 8 bits
 }
