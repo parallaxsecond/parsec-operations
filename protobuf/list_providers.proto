@@ -18,7 +18,7 @@ syntax = "proto3";
 
 package list_providers;
 
-message ProviderInfoProto {
+message ProviderInfo {
   string uuid = 1;
   string description = 2;
   string vendor = 3;
@@ -28,6 +28,6 @@ message ProviderInfoProto {
   uint32 id = 7;
 }
 
-message OpListProvidersProto {}
+message Operation {}
 
-message ResultListProvidersProto { repeated ProviderInfoProto providers = 1; }
+message Result { repeated ProviderInfo providers = 1; }

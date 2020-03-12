@@ -14,6 +14,7 @@
     [maintainers.core]
     people = [
       "adamparco",
+      "anta5010",
       "heavypackets",
       "hug-dev",
       "ionut-arm",
@@ -29,6 +30,11 @@
     Name = "Adam Parco"
     Email = "adam.parco@docker.com"
     GitHub = "adamparco"
+
+    [people.anta5010]
+    Name = "Anton Antonov"
+    Email = "anton.antonov@arm.com"
+    GitHub = "anta5010"
 
     [people.heavypackets]
     Name = "Sabree Blackmon"
@@ -54,4 +60,3 @@
     Name = "Paul Howard"
     Email = "paul.howard@arm.com"
     GitHub = "paulhowardarm"
-
