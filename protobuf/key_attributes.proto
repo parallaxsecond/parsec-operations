@@ -92,4 +92,5 @@ message UsageFlags {
   bool verify_message = 7;
   bool sign_hash = 8;
   bool verify_hash = 9;
+  bool derive = 10;
 }
