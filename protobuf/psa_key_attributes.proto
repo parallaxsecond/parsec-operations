@@ -16,9 +16,9 @@
  */
 syntax = "proto3";
 
-package key_attributes;
+package psa_key_attributes;
 
-import "algorithm.proto";
+import "psa_algorithm.proto";
 
 message KeyAttributes {
   KeyType key_type = 1;
@@ -79,7 +79,7 @@ message KeyType {
 
 message KeyPolicy {
   UsageFlags key_usage_flags = 1;
-  algorithm.Algorithm key_algorithm = 2;
+  psa_algorithm.Algorithm key_algorithm = 2;
 }
 
 message UsageFlags {

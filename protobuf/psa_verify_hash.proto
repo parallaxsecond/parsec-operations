@@ -16,14 +16,15 @@
  */
 syntax = "proto3";
 
-package sign_hash;
+package psa_verify_hash;
 
-import "algorithm.proto";
+import "psa_algorithm.proto";
 
 message Operation {
   string key_name = 1;
-  algorithm.Algorithm.AsymmetricSignature alg = 2;
+  psa_algorithm.Algorithm.AsymmetricSignature alg = 2;
   bytes hash = 3;
+  bytes signature = 4;
 }
 
-message Result { bytes signature = 1; }
+message Result {}

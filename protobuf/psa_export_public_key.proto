@@ -16,7 +16,7 @@
  */
 syntax = "proto3";
 
-package export_public_key;
+package psa_export_public_key;
 
 message Operation { string key_name = 1; }
 
