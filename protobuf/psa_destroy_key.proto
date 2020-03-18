@@ -16,13 +16,8 @@
  */
 syntax = "proto3";
 
-package generate_key;
+package psa_destroy_key;
 
-import "key_attributes.proto";
-
-message Operation {
-  string key_name = 1;
-  key_attributes.KeyAttributes attributes = 2;
-}
+message Operation { string key_name = 1; }
 
 message Result {}

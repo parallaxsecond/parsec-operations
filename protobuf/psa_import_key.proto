@@ -16,13 +16,13 @@
  */
 syntax = "proto3";
 
-package import_key;
+package psa_import_key;
 
-import "key_attributes.proto";
+import "psa_key_attributes.proto";
 
 message Operation {
   string key_name = 1;
-  key_attributes.KeyAttributes attributes = 2;
+  psa_key_attributes.KeyAttributes attributes = 2;
   bytes data = 3;
 }
 
