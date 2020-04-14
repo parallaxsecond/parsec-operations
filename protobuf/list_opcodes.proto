@@ -18,6 +18,6 @@ syntax = "proto3";
 
 package list_opcodes;
 
-message Operation {}
+message Operation { uint32 provider_id = 1; } // Cast down to 8 bits
 
 message Result { repeated uint32 opcodes = 1; }
