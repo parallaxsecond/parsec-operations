@@ -25,7 +25,6 @@ message Algorithm {
     SHA3_256 = 13;
     SHA3_384 = 14;
     SHA3_512 = 15;
-    ANY_HASH = 2047;
   }
   message Mac {
     message FullLength {
@@ -79,12 +78,20 @@ message Algorithm {
     }
   }
   message AsymmetricSignature {
-    message RsaPkcs1v15Sign { Hash hash_alg = 1; }
+    message SignHash {
+      message Any {}
+
+      oneof variant {
+        Any any = 1;
+        Hash specific = 2;
+      }
+    }
+    message RsaPkcs1v15Sign { SignHash hash_alg = 1; }
     message RsaPkcs1v15SignRaw {}
-    message RsaPss { Hash hash_alg = 1; }
-    message Ecdsa { Hash hash_alg = 1; }
+    message RsaPss { SignHash hash_alg = 1; }
+    message Ecdsa { SignHash hash_alg = 1; }
     message EcdsaAny {}
-    message DeterministicEcdsa { Hash hash_alg = 1; }
+    message DeterministicEcdsa { SignHash hash_alg = 1; }
 
     oneof variant {
       RsaPkcs1v15Sign rsa_pkcs1v15_sign = 1;
