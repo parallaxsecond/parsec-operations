@@ -1,0 +1,17 @@
+/*
+ * Copyright 2019 Contributors to the Parsec project.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+syntax = "proto3";
+
+package psa_copy_key;
+
+import "psa_key_attributes.proto";
+
+message Operation {
+  string key_name_to_copy = 1;
+  string copied_key_name = 2;
+  psa_key_attributes.KeyAttributes attributes = 3;
+}
+
+message Result {}
