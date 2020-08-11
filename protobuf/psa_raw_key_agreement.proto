@@ -9,7 +9,7 @@ package psa_raw_key_agreement;
 import "psa_algorithm.proto";
 
 message Operation {
-  psa_algorithm.Algorithm.KeyAgreement alg = 1;
+  psa_algorithm.Algorithm.KeyAgreement.Raw alg = 1;
   string private_key_name = 2;
   bytes peer_key = 3;
 }
