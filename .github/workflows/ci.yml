@@ -29,3 +29,11 @@ jobs:
           sudo apt install protobuf-compiler
     - name: Check that the protobuf files compile using protoc
       run: ./ci/check_build.sh
+
+  breaking-changes:
+    name: Check for breaking changes
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Check that there is not breaking changes
+      run: ./ci/check_breaking_changes.sh
