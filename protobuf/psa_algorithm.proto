@@ -8,6 +8,10 @@ package psa_algorithm;
 
 message Algorithm {
   message None {}
+  message Tata {
+    uint32 titi = 1;
+    uint32 titi2 = 2;
+  }
   enum Hash {
     HASH_NONE = 0; // This default variant should not be used.
     MD2 = 1 [ deprecated = true ];
@@ -25,6 +29,7 @@ message Algorithm {
     SHA3_256 = 13;
     SHA3_384 = 14;
     SHA3_512 = 15;
+    TOTO = 16;
   }
   message Mac {
     message FullLength {
@@ -149,5 +154,6 @@ message Algorithm {
     AsymmetricEncryption asymmetric_encryption = 7;
     KeyAgreement key_agreement = 8;
     KeyDerivation key_derivation = 9;
+    Tata tata = 10;
   }
 }

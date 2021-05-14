@@ -14,6 +14,7 @@ message ProviderInfo {
   uint32 version_min = 5;
   uint32 version_rev = 6;
   uint32 id = 7;
+  uint32 toto = 8;
 }
 
 message Operation {}

@@ -10,7 +10,7 @@ import "psa_algorithm.proto";
 
 message KeyAttributes {
   KeyType key_type = 1;
-  uint32 key_bits = 2;
+  int32 key_bits = 2;
   KeyPolicy key_policy = 3;
 }
 
@@ -74,7 +74,6 @@ message UsageFlags {
   bool export = 1;
   bool copy = 2;
   bool cache = 3;
-  bool encrypt = 4;
   bool decrypt = 5;
   bool sign_message = 6;
   bool verify_message = 7;
