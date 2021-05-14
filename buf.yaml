@@ -1,0 +1,21 @@
+# Copyright 2021 Contributors to the Parsec project.
+# SPDX-License-Identifier: Apache-2.0
+
+# This is the default config file from https://docs.buf.build/configuration#bufyaml-defaults
+# with minor modifications.
+
+version: v1beta1
+build:
+  roots:
+    - protobuf/
+lint:
+  use:
+    - DEFAULT
+  enum_zero_value_suffix: _NONE
+  rpc_allow_same_request_response: false
+  rpc_allow_google_protobuf_empty_requests: false
+  rpc_allow_google_protobuf_empty_responses: false
+  service_suffix: Service
+breaking:
+  use:
+    - FILE
