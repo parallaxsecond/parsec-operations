@@ -1,0 +1,24 @@
+/*
+ * Copyright 2021 Contributors to the Parsec project.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+syntax = "proto3";
+
+package can_do_crypto;
+
+import "psa_key_attributes.proto";
+
+enum CheckType {
+  CHECKTYPE_NONE = 0;
+  USE = 1;
+  GENERATE = 2;
+  IMPORT = 3;
+  DERIVE = 4;
+}
+
+message Operation {
+  CheckType check_type = 1;
+  psa_key_attributes.KeyAttributes attributes = 2;
+}
+
+message Result {}
