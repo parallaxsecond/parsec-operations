@@ -1,0 +1,30 @@
+/*
+ * Copyright 2021 Contributors to the Parsec project.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+syntax = "proto3";
+
+package attest_key;
+
+message AttestationMechanismParams {
+  message ActivateCredential {
+    bytes credential_blob = 1;
+    bytes secret = 2;
+  }
+
+  oneof mechanism { ActivateCredential activate_credential = 1; }
+}
+
+message Operation {
+  string attested_key_name = 1;
+  AttestationMechanismParams parameters = 2;
+  string attesting_key_name = 3;
+}
+
+message AttestationOutput {
+  message ActivateCredential { bytes credential = 1; }
+
+  oneof mechanism { ActivateCredential activate_credential = 1; }
+}
+
+message Result { AttestationOutput output = 1; }
